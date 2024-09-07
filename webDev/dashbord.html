@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Centered Div with Header</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+        }
+        header img {
+            max-width: 100px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li {
+            cursor: pointer;
+            color: white;
+        }
+        nav ul li:hover {
+            text-decoration: underline;
+        }
+        div {
+            width: 200px;
+            aspect-ratio: 1/1;
+            background: gold;
+            position: fixed;
+            margin: auto;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+        }
+        p {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="assets/images/ijse.png" alt="IJSE Logo">
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Contacts</li>
+            <li>About Us</li>
+        </ul>
+    </nav>
+</header>
+
+<div></div>
+
+
+
+</body>
+</html>

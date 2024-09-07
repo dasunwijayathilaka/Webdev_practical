@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: darkmagenta;
+
+            animation-name: my-animation;
+            animation: my-animation 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate-reverse;
+            animation-delay: 5s;
+            animation-play-state: unset;
+        }
+
+        @keyframes my-animation { /*soi trop*/
+            0%{
+                background: #008cff;
+            }
+
+            25%{
+
+                background: greenyellow;
+                margin-left: 600px;
+              /*  transform:rotate(360deg) ;*/
+            }
+
+            50%{
+                background-color: grey;
+            }
+
+            75%{
+                background-color: black;
+            }
+
+            100%{
+                background-color: blueviolet;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+</body>
+</html>

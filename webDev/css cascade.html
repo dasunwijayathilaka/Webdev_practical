@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="this is the description">
+    <meta name="keywords" content="java, html, css, js, go, react, angular">
+    <meta name="author" content="ijse">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/logo.png"> <!-- Favicon -->
+
+    <title>CSS Cascade</title>
+
+    <style>
+
+        /* (0,1,0,0) */
+        #mybtn {
+            color: mediumpurple;
+        }
+
+        /* (0,0,0,0) */
+        * {
+            color: red;
+        }
+
+        /* (0,0,0,1) */
+        button {
+            color: gold;
+        }
+
+        /* (0,0,1,0) */
+        .btn {
+            color: green !important;
+        }
+
+        /* (0, 0, 1, 1) */
+        ul>li:first-child {
+            color: red;
+        }
+
+        /* (0, 0, 0, 2) */
+        ul>li {
+            color: hotpink;
+        }
+
+    </style>
+
+<body>
+
+
+<!-- (1, 0, 0, 0)-->
+<button id="mybtn" class="btn">Click Me!</button>
+
+<ul>
+    <li>GDSE</li>
+    <li>CMJD</li>
+    <li>DEP</li>
+</ul>
+
+</body>
+
+</html>

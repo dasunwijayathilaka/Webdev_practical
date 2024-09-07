@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card Patrice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .cards {
+            display: grid;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            border: 1px solid burlywood;
+            text-align: center;
+            background-color: mediumaquamarine;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Laptop view: 4 cards in a row */
+        @media all and (min-width: 1000px) {
+            .cards {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Tablet view: 2 cards in a row, 2 cards under */
+        @media all and (min-width: 768px) and (max-width: 1023px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+/* mobile view*/
+            @media all and (min-width: 500px) and (max-width: 768px) {
+                .cards {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <div class="cards">
+        <div class="card">
+            <h3>Card 1</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <button>Explore</button>
+        </div>
+
+        <div class="card">
+            <h3>Card 2</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <button>Explore</button>
+        </div>
+
+        <div class="card">
+            <h3>Card 3</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <button>Explore</button>
+        </div>
+
+        <div class="card">
+            <h3>Card 4</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <button>Explore</button>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

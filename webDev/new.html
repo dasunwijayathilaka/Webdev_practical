@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Layout</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: wheat;
+            color: black;
+            position: relative;
+            height: 88px;
+            width: 100%;
+            background-color: #c4bebe;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        header img {
+            max-width: 100px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            cursor: pointer;
+        }
+
+        main {
+            margin: 20px;
+            padding-top: 108px; /* Added padding to avoid content overlapping with fixed header */
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        /* Centered Div */
+        div {
+            width: 200px;
+            aspect-ratio: 1 / 1;
+            background: gold;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        /* Section with Sticky Elements */
+        section {
+            width: 200px;
+            margin: 20px 0;
+            padding: 10px;
+            border: 2px solid #26ace0;
+            color: deeppink;
+        }
+
+        section div {
+            width: 300px;
+            position: sticky;
+            top: 0;
+            background-color: lightgray;
+            padding: 10px;
+            border: yellow;
+            aspect-ratio: 1 / 1;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="assets/images/ijse.png" alt="IJSE Logo">
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Contacts</li>
+            <li>About Us</li>
+        </ul>
+    </nav>
+</header>
+
+<div></div>
+
+<main>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt dolor dolorem illo inventore minima minus! Architecto beatae dolorem dolorum facilis fugiat incidunt ipsum quaerat sunt suscipit vero! Accusantium, dolor.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt dolor dolorem illo inventore minima minus! Architecto beatae dolorem dolorum facilis fugiat incidunt ipsum quaerat sunt suscipit vero! Accusantium, dolor.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt dolor dolorem illo inventore minima minus! Architecto beatae dolorem dolorum facilis fugiat incidunt ipsum quaerat sunt suscipit vero! Accusantium, dolor.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt dolor dolorem illo inventore minima minus! Architecto beatae dolorem dolorum facilis fugiat incidunt ipsum quaerat sunt suscipit vero! Accusantium, dolor.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt dolor dolorem illo inventore minima minus! Architecto beatae dolorem dolorum facilis fugiat incidunt ipsum quaerat sunt suscipit vero! Accusantium, dolor.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt dolor dolorem illo inventore minima minus! Architecto beatae dolorem dolorum facilis fugiat incidunt ipsum quaerat sunt suscipit vero! Accusantium, dolor.
+    </p>
+
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt dolor dolorem illo inventore minima minus! Architecto beatae dolorem dolorum facilis fugiat incidunt ipsum quaerat sunt suscipit vero! Accusantium, dolor.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt dolor dolorem illo inventore minima minus! Architecto beatae dolorem dolorum facilis fugiat incidunt ipsum quaerat sunt suscipit vero! Accusantium, dolor.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt dolor dolorem illo inventore minima minus! Architecto beatae dolorem dolorum facilis fugiat incidunt ipsum quaerat sunt suscipit vero! Accusantium, dolor.
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt dolor dolorem illo inventore minima minus! Architecto beatae dolorem dolorum facilis fugiat incidunt ipsum quaerat sunt suscipit vero! Accusantium, dolor.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt dolor dolorem illo inventore minima minus! Architecto beatae dolorem dolorum facilis fugiat incidunt ipsum quaerat sunt suscipit vero! Accusantium, dolor.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt dolor dolorem illo inventore minima minus! Architecto beatae dolorem dolorum facilis fugiat incidunt ipsum quaerat sunt suscipit vero! Accusantium, dolor.
+        </p>
+    </section>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt dolor dolorem illo inventore minima minus! Architecto beatae dolorem dolorum facilis fugiat incidunt ipsum quaerat sunt suscipit vero! Accusantium, dolor.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt dolor dolorem illo inventore minima minus! Architecto beatae dolorem dolorum facilis fugiat incidunt ipsum quaerat sunt suscipit vero! Accusantium, dolor.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt dolor dolorem illo inventore minima minus! Architecto beatae dolorem dolorum facilis fugiat incidunt ipsum quaerat sunt suscipit vero! Accusantium, dolor.
+    </p>
+</main>
+
+<section>
+    parent: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt dolor dolorem illo inventore minima minus! Architecto beatae dolorem dolorum facilis fugiat incidunt ipsum quaerat sunt suscipit vero! Accusantium, dolor.
+    <div>
+        child: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, deserunt dolor dolorem illo inventore minima minus! Architecto beatae dolorem dolorum facilis fugiat incidunt ipsum quaerat sunt suscipit vero! Accusantium, dolor.
+    </div>
+</section>
+
+</body>
+</html>

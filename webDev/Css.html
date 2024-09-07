@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="assets/Styles/Css1.css">
+
+    <style>
+        /* Internal CSS - Type Selector */
+        h2 {
+            color: gold; /* Sets the text color of all <h2> elements to gold */
+            background: lightskyblue; /* Sets the background color of all <h2> elements to lightskyblue */
+        }
+
+        /* ID Selector */
+        #my-topic {
+            /* ID-specific styles can be added here if needed */
+        }
+
+        /* Class Selector */
+        .my-class {
+            color: darkorange; /* Sets the text color of all elements with class "my-class" to darkorange */
+        }
+
+        /* Universal Selector */
+        * {
+            color: purple; /* Sets the text color of all elements to purple */
+        }
+
+        /* Attribute Selector */
+        [href] {
+            color: deeppink; /* Sets the text color of <a> elements with an href attribute to deeppink */
+        }
+
+        /* Attribute Selector with Value */
+        [href="http://localhost"] {
+            color: darkolivegreen; /* Sets the text color of <a> elements with href="http://localhost" to darkolivegreen */
+        }
+
+        /* Attribute Selector with Starting Value */
+        [href^="https"] {
+            font-weight: bold; /* Sets the font weight of <a> elements with href starting with "https" to bold */
+        }
+
+        /* Attribute Selector with Ending Value */
+        [href$=".com"] {
+            background: deeppink; /* Sets the background color of <a> elements with href ending in ".com" to deeppink */
+        }
+
+        /* Attribute Selector with Substring */
+        [href*="IJSE"] {
+            background: darkblue; /* Sets the background color of <a> elements with href containing "IJSE" to darkblue */
+        }
+
+        /* Attribute Selector with Specific Word */
+        [href~="IJSE1"] {
+            background: lawngreen; /* Sets the background color of <a> elements with href containing the word "IJSE1" to lawngreen */
+        }
+
+        /* Pseudo-Class Selector */
+        h2:hover {
+            color: black; /* Changes the text color of <h2> elements to black when hovered over */
+        }
+
+        h2:active {
+            color: mediumslateblue; /* Changes the text color of <h2> elements to mediumslateblue when active (clicked) */
+        }
+
+        /* Link Pseudo-Classes */
+        a:link {
+            color: black; /* Sets the color of unvisited <a> links to black */
+        }
+
+        a:visited {
+            color: purple; /* Sets the color of visited <a> links to purple */
+        }
+
+        /* Input Pseudo-Class */
+        input:focus {
+            background: green; /* Sets the background color of input fields to green when they are focused */
+        }
+
+        /* List Item Pseudo-Classes */
+        li:first-child {
+            color: lightskyblue; /* Sets the text color of the first <li> element in a list to lightskyblue */
+            background: white; /* Sets the background color of the first <li> element in a list to white */
+        }
+
+        li:last-child {
+            color: greenyellow; /* Sets the text color of the last <li> element in a list to greenyellow */
+            background: white; /* Sets the background color of the last <li> element in a list to white */
+        }
+
+        li:nth-child(5) {
+            color: purple; /* Sets the text color of the fifth <li> element in a list to purple */
+            background: green; /* Sets the background color of the fifth <li> element in a list to green */
+        }
+
+        li:nth-last-child(2) {
+            color: mediumslateblue; /* Sets the text color of the second-to-last <li> element in a list to mediumslateblue */
+            background: brown; /* Sets the background color of the second-to-last <li> element in a list to brown */
+        }
+
+
+        li:nth-child(odd) {
+            color: hotpink; /* Sets the text color of odd <li> elements to hotpink */
+            background: lightpink; /* Sets the background color of odd <li> elements to lightpink */
+
+
+            li:nth-child(even) {
+                color: hotpink; /* Sets the text color of even <li> elements to hotpink */
+                background: lightpink; /* Sets the background color of even <li> elements to lightpink */
+            }
+
+            li:nth-child(n+4) {
+                color: hotpink; /* Sets the text color of <li> elements from the fourth onwards to hotpink */
+                background: lightpink; /* Sets the background color of <li> elements from the fourth onwards to lightpink */
+            }
+
+            li:nth-child(3n-1) {
+                color: hotpink; /* Sets the text color of <li> elements with a position of 3n-1 to hotpink */
+                background: lightpink; /* Sets the background color of <li> elements with a position of 3n-1 to lightpink */
+            }
+
+            li:nth-child(3n+1) {
+                color: hotpink; /* Sets the text color of <li> elements with a position of 3n+1 to hotpink */
+                background: lightpink; /* Sets the background color of <li> elements with a position of 3n+1 to lightpink */
+            }
+
+            li:nth-child(4n) {
+                color: hotpink; /* Sets the text color of <li> elements at every fourth position to hotpink */
+                background: lightpink; /* Sets the background color of <li> elements at every fourth position to lightpink */
+            }
+
+
+            /* Add Content Before and After Elements */
+
+            h1::before {
+                content: "😒"; /* Adds a frown emoji before the content of <h1> elements */
+            }
+
+            h1:hover::before {
+                background: green; /* Changes the background color of the content added before <h1> elements to green when hovered */
+            }
+
+            h1::after {
+                content: "😂"; /* Adds a laughing emoji after the content of <h1> elements */
+            }
+
+            /* Pseudo-Elements */
+
+            p::first-letter {
+                font-weight: bold; /* Makes the first letter of <p> elements bold */
+                color: brown; /* Sets the color of the first letter of <p> elements to brown */
+            }
+
+            p::first-line {
+                background: yellow; /* Sets the background color of the first line of <p> elements to yellow */
+            }
+
+            /* Input Pseudo-Element */
+
+            input::placeholder {
+                color: green; /* Sets the color of the placeholder text in input fields to green */
+                background: yellow; /* Sets the background color of the placeholder text in input fields to yellow */
+            }
+
+            /* File Input Styling */
+
+            input[type="File"]::file-selector-button {
+                background: #15a1cc; /* Sets the background color of the file input button to a blue shade */
+            }
+
+            /* Text Selection Pseudo-Element */
+
+            p::selection {
+                background: hotpink; /* Sets the background color of selected text in <p> elements to hotpink */
+            }
+
+            /* List Item Marker */
+
+            li::marker {
+                content: "😒"; /* Replaces the default marker of <li> elements with a frown emoji */
+            }
+
+            /* Grouping Selectors */
+
+            h1, #my-topic, .my-class, ul {
+                font-weight: bold; /* Sets the font weight of <h1>, elements with id "my-topic", elements with class "my-class", and <ul> to bold */
+            }
+        }
+
+    </style>
+</head>
+<body>
+<!-- Inline CSS -->
+<h1 style="color: blue; text-align: center;">This was CSS Module</h1>
+<!-- Inline styles directly applied to this <h1> element -->
+
+<h1 style="color: red;">Welcome to the IJSE</h1>
+<!-- Inline styles directly applied to this <h1> element -->
+
+<!-- Internal CSS & ID Selector Used -->
+<h2 id="my-topic">Welcome to internet technologies</h2>
+<!-- Internal CSS and ID selector #my-topic applied to this <h2> element -->
+
+<!-- External CSS -->
+<h3>Welcome to GDSE</h3>
+<!-- Styles from external CSS file (Css1.css) will be applied to this <h3> element -->
+
+<!-- Paragraph CSS & Class Selector Used -->
+<p class="my-class">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur debitis fugit impedit natus nobis nulla odit, optio repellendus sequi sint, sit. Autem corporis est, excepturi officia quo repellendus vel.
+</p>
+<!-- The class "my-class" applies styles from internal CSS to this <p> element -->
+
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur debitis fugit impedit natus nobis nulla odit, optio repellendus sequi sint, sit. Autem corporis est, excepturi officia quo repellendus vel.
+</p>
+
+<p class="my-class">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur debitis fugit impedit natus nobis nulla odit, optio repellendus sequi sint, sit. Autem corporis est, excepturi officia quo repellendus vel.
+</p>
+<!-- The class "my-class" applies styles from internal CSS to this <p> element -->
+
+<!-- Attribute Selector -->
+<a href="https://nimmna.lk">nimmna</a><br>
+<a href="https://IJSE.lk">IJSE</a><br>
+<a href="https://IJSE1.lk">IJSE1</a><br>
+<a href="http://localhost">Ijse1</a><br>
+<a href="https://localhost">Ijse1</a><br>
+<a href="https://dassa.com">dassa</a><br>
+<!-- The styles for <a> elements will be affected by attribute selectors from the internal CSS -->
+
+<h3 class="h301">H3 01</h3>
+<h3>H3 01</h3>
+<!-- The styles for these <h3> elements will be affected by external CSS -->
+
+<a href="http://sirasatv.lk">Sirasa</a><br>
+<a href="http://hirutv.lk">Hiru tv</a><br>
+<a href="http://supremetv.lk">Supreme Tv</a><br>
+<!-- More <a> elements for demonstration of attribute selectors -->
+
+<input type="text" placeholder="enter your name">
+<!-- Placeholder text styling is applied from internal CSS -->
+
+<input type="File">
+<!-- File input styling is applied from internal CSS -->
+
+<ul>
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>D</li>
+    <li>E</li>
+    <li>F</li>
+</ul>
+<!-- List item styles are applied from internal CSS -->
+
+
+<section>
+    <h1>Internet Technologies</h1>
+    <ul>
+        <li>HTML</li>
+        <li>
+            CSS
+            <ol>
+                <li>Inline CSS</li>
+                <li>Internal CSS</li>
+                <li>External CSS</li>
+            </ol>
+        </li>
+        <li>Bootstrap</li>
+        <li>JS</li>
+        <li>JQuery</li>
+    </ul>
+</section>
+
+
+
+
+
+
+</body>
+</html>

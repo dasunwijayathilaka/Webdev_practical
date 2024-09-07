@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Css design4</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+        .quadrant {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+
+        }
+        .top-right { background-color: green; top: 0; right: 0; }
+        .bottom-right { background-color: pink; bottom: 0; right: 0; }
+        .bottom-left{ }
+
+        .circle {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            background-color: white;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+        .square {
+            width: 50%;
+            height: 50%;
+            background-color: red;
+        }
+        .center-square {
+            position: absolute;
+            width: 20%;
+            height: 20%;
+            background-color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .center-circle {
+            width: 50%;
+            height: 50%;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+
+    </style>
+</head>
+<body>
+<body>
+<div class="container">
+    <div class="quadrant top-left">
+        <div class="circle">
+            <div class="square"></div>
+        </div>
+    </div>
+    <div class="quadrant top-right">
+        <div class="circle">
+            <div class="square"></div>
+        </div>
+    </div>
+    <div class="quadrant bottom-left">
+        <div class="circle">
+            <div class="square"></div>
+        </div>
+    </div>
+    <div class="quadrant bottom-right">
+        <div class="circle">
+            <div class="square"></div>
+        </div>
+    </div>
+    <div class="center-square">
+        <div class="center-circle"></div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
