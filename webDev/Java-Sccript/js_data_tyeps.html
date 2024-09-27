@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Types</title>
+    <script>
+        window.onload = function() {
+            // String
+            let name = "Dasun";
+            document.getElementById("stringType").innerHTML = "String: " + name;
+
+            // Number
+            let age = 25;
+            document.getElementById("numberType").innerHTML = "Number: " + age;
+
+            // Boolean
+            let isStudent = true;
+            document.getElementById("booleanType").innerHTML = "Boolean: " + isStudent;
+
+            // Array
+            let hobbies = ["reading", "sports", "music"];
+            document.getElementById("arrayType").innerHTML = "Array: " + hobbies;
+
+            // Object
+            let person = {firstName: "Dasun", lastName: "Wijayathilaka", age: 25};
+            document.getElementById("objectType").innerHTML = "Object: " + JSON.stringify(person);
+
+            // Undefined
+            let x;
+            document.getElementById("undefinedType").innerHTML = "Undefined: " + x;
+
+            // Null
+            let y = null;
+            document.getElementById("nullType").innerHTML = "Null: " + y;
+        }
+    </script>
+</head>
+<body>
+<h1>JavaScript Data Types Examples</h1>
+<p id="stringType"></p>
+<p id="numberType"></p>
+<p id="booleanType"></p>
+<p id="arrayType"></p>
+<p id="objectType"></p>
+<p id="undefinedType"></p>
+<p id="nullType"></p>
+</body>
+</html>
